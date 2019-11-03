@@ -13,10 +13,22 @@ client.on('message', (receivedMessage) => {
         return
     }
 
-    // Reply to the user with a thank you
-    if (receivedMessage.content.includes(client.user.toString()))   {
-        receivedMessage.channel.send("Thank you " + receivedMessage.author.toString() + " for your message")
+    if (receivedMessage.content.startsWith("!"))    {
+        processCommand(receivedMessage)
     }
-}) 
+})
+
+function processCommand(receivedMessage)    {
+    let fullCommand = receivedMessage.content.substr(1) // Removing the leading exclamation mark
+    let splitCommand = fullCommand.split(" ") // Spliting the message into pieces
+    let primaryCommand = splitCommand[0]
+    let arguments = splitCommand.slice(1)
+
+    console.log("Command received: " + primaryCommand)
+
+    if (primaryCommand == "fart")   {
+        receivedMessage.channel.send("You may want to check that you haven't followed through :poop:")
+    }
+}
 
 client.login(process.env.TOKEN)
