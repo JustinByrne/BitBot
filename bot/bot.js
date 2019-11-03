@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -31,4 +29,4 @@ function processCommand(receivedMessage)    {
     }
 }
 
-client.login(process.env.TOKEN)
+client.login(config.token)
