@@ -1,4 +1,4 @@
-const config = require('./config.json')
+const { prefix, token } = require('./config.json')
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -7,12 +7,12 @@ client.on('ready', () => {
 })
 
 client.on('message', (receivedMessage) => {
-    // Preventing bot from replying to itself
-    if (receivedMessage.author == client.user)  {
+    // Preventing bot from replying to itself or not a command
+    if (!receivedMessage.content.startsWith(prefix) || receivedMessage.author == client.user)  {
         return
     }
 
-    if (receivedMessage.content.startsWith("!"))    {
+    if (receivedMessage.content.startsWith(prefix))    {
         processCommand(receivedMessage)
     }
 })
@@ -30,4 +30,4 @@ function processCommand(receivedMessage)    {
     }
 }
 
-client.login(config.token)
+client.login(token)
