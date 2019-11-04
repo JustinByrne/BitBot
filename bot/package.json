@@ -1,0 +1,23 @@
+{
+  "name": "bitbot",
+  "version": "0.1.0",
+  "description": "A bot with limited functionality",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinbyrne/bitbot.git"
+  },
+  "author": "Justin Byrne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinbyrne/bitbot/issues"
+  },
+  "homepage": "https://github.com/justinbyrne/bitbot#readme"
+}
