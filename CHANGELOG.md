@@ -19,7 +19,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - README with relavant link to install
 - MIT LICENSE
 - CHANGELOG to document all changes
-
-[0.1.0] [https://github.com/JustinByrne/BitBot/releases/tag/0.1.0](https://github.com/JustinByrne/BitBot/releases/tag/0.1.0)
-
-[0.0.1] [https://github.com/JustinByrne/BitBot/releases/tag/0.0.1](https://github.com/JustinByrne/BitBot/releases/tag/0.0.1)
