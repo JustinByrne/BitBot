@@ -4,12 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [0.1.0](https://github.com/JustinByrne/BitBot/releases/tag/0.0.1) - 2019
+## [0.1.0](https://github.com/JustinByrne/BitBot/releases/tag/0.1.0) - 2019-11-
+
+### Added
+
+- A `commands` directory to keep all the commands
+- A `fart.js` file with the code to execute for the `!fart` command
+- Added the ability to read all `.js` files from the `commands` directory
+- Added the ability for commands to be run dynamically
 
 ### Changed
 
 - Changed the `bot` directory to `src`
 - Changed `CHANGELOG.md` formatting to comply with MD
+- Changed `recievedMessage` to `message` to shrink code
+- Prevented the bot to replying to other bots
 
 ## [0.0.1](https://github.com/JustinByrne/BitBot/releases/tag/0.0.1) - 2019-11-07
 
