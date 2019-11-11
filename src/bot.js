@@ -6,19 +6,19 @@ client.on('ready', () => {
     console.log("Connected as " + client.user.tag);
 })
 
-client.on('message', (receivedMessage) => {
+client.on('message', (message) => {
     // Preventing bot from replying to itself or not a command
-    if (!receivedMessage.content.startsWith(prefix) || receivedMessage.author == client.user)  {
+    if (!message.content.startsWith(prefix) || message.author == client.user)  {
         return;
     }
 
-    if (receivedMessage.content.startsWith(prefix))    {
-        processCommand(receivedMessage);
+    if (message.content.startsWith(prefix))    {
+        processCommand(message);
     }
 })
 
-function processCommand(receivedMessage)    {
-    let fullCommand = receivedMessage.content.substr(1); // Removing the leading exclamation mark
+function processCommand(message)    {
+    let fullCommand = message.content.substr(1); // Removing the leading exclamation mark
     let splitCommand = fullCommand.split(" "); // Spliting the message into pieces
     let primaryCommand = splitCommand[0];
     let arguments = splitCommand.slice(1);
@@ -26,7 +26,7 @@ function processCommand(receivedMessage)    {
     console.log("Command received: " + primaryCommand);
 
     if (primaryCommand == "fart")   {
-        receivedMessage.channel.send("You may want to check that you haven't followed through :poop:");
+        message.channel.send("You may want to check that you haven't followed through :poop:");
     }
 }
 
