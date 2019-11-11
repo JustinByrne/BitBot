@@ -7,10 +7,8 @@ client.on('ready', () => {
 })
 
 client.on('message', (message) => {
-    // Preventing bot from replying to itself or not a command
-    if (!message.content.startsWith(prefix) || message.author == client.user)  {
-        return;
-    }
+    // Preventing bot from replying to another bot or not a command
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     if (message.content.startsWith(prefix))    {
         processCommand(message);
