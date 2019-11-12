@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [0.2.0](https://github.com/JustinByrne/BitBot/releases/tag/0.2.0) - 2019-11-12
+
+### Added
+
+- Installed `long` using `npm`
+- Added a function to find the default channel
+- Added the ability to welcome users when they go online.
+
 ## [0.1.0](https://github.com/JustinByrne/BitBot/releases/tag/0.1.0) - 2019-11-11
 
 ### Added
