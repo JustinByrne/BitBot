@@ -34,6 +34,14 @@ client.on('message', (message) => {
     }
 })
 
+client.on('presenceUpdate', (oldMember, newMember) => {
+    // only doing something if the person has come online
+    if (oldMember.presence.status != 'offline') return;
+
+    const channel = getDefaultChannel(newMember.guild);
+
+    channel.send(`Welcome ${newMember} to the server!`);
+});
 
 // create function to find default or first text channel
 const getDefaultChannel = (guild) => {
