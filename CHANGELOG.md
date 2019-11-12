@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Added
 
-- Installed long using `npm`
+- Installed `long` using `npm`
 - Added a function to find the default channel
 - Added the ability to welcome users when they go online.
 
