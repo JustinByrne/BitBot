@@ -1,4 +1,5 @@
 # BitBot
+
 This is my first attempt at creating a bot for Discord.
 
 ## Features
