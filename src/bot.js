@@ -35,13 +35,17 @@ client.on('message', (message) => {
     }
 })
 
-client.on('presenceUpdate', (oldMember, newMember) => {
-    // only doing something if the person has come online
-    if (oldMember.presence.status != 'offline') return;
-
-    const channel = getDefaultChannel(newMember.guild);
-
-    channel.send(`Welcome ${newMember} to the server!`);
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // Welcoming a user to a voice channel
+    if (oldMember.voiceChannel === undefined && newMember.voiceChannel !== undefined)   {
+        // sending a message to the default text channel.
+        const channel = getDefaultChannel(newMember.guild);
+        channel.send(`${newMember.nickname} joined the [${newMember.voiceChannel.name}] voice channel.`);
+    } else if (newMember.voiceChannel === undefined)    {
+        // sending a message to the default text channel.
+        const channel = getDefaultChannel(oldMember.guild);
+        channel.send(`${oldMember.nickname} left and didn't even say goodbye!`);
+    }
 });
 
 // create function to find default or first text channel
